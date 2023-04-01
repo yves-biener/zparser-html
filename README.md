@@ -1,2 +1,5 @@
 # zparser-html
-HTML Spec Complient parser written in zig.
+
+[HTML Spec](https://html.spec.whatwg.org/multipage/parsing.html) Complient
+parser library. This parser tokenizes the input html string and returns the
+generated tree structure.
