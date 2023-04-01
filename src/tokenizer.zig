@@ -11,6 +11,7 @@ export const Attribute = struct {
     value: []const u8,
 };
 
+/// See [Tokenization](https://html.spec.whatwg.org/multipage/parsing.html#tokenization) for more details.
 export const Token = union(enum) {
     DOCTYPE: struct {
         name: ?[]const u8 = null,

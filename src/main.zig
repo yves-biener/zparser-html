@@ -5,7 +5,7 @@ input_stream: []const u8 = undefined,
 point: usize = undefined,
 
 /// Errors which are defined to be identified during the parsing of the syntax of HTML.
-/// For more details see (Parse errors)[https://html.spec.whatwg.org/multipage/parsing.html#parse-errors]
+/// For more details see [Parse errors](https://html.spec.whatwg.org/multipage/parsing.html#parse-errors)
 export const SyntaxError = error{
     AbructClosingOfEmptyComment,
     AbruptDocTypePublicIdentifier,
