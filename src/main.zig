@@ -1,10 +1,53 @@
-const std = @import("std");
-const testing = std.testing;
-
-export fn add(a: i32, b: i32) i32 {
-    return a + b;
-}
-
-test "basic add functionality" {
-    try testing.expect(add(3, 7) == 10);
-}
+/// Errors which are defined to be identified during the parsing of the syntax of HTML.
+/// For more details see (Parse errors)[https://html.spec.whatwg.org/multipage/parsing.html#parse-errors]
+export const SyntaxError = error{
+    AbructClosingOfEmptyComment,
+    AbruptDocTypePublicIdentifier,
+    AbruptDoctypeSystemIdentifier,
+    AbsenceOfDigitsInNumericCharacterReference,
+    CdataInHtmlContent,
+    CharacterReferenceOutsideUnicodeRange,
+    ControlCharacterInInputStream,
+    ControlCharacterReference,
+    EndTagWithAttributes,
+    DuplicateAttribute,
+    EndTagWithTrailingSolidus,
+    EofBeforeTagName,
+    EofInCdata,
+    EofInComment,
+    EofInDoctype,
+    EofInScriptHtmlCommentLikeText,
+    EofInTag,
+    IncorrectlyClosedComment,
+    IncorrectlyOpenedComment,
+    InvalidCharacterSequenceAfterDoctypeName,
+    InvalidFirstCharacterOfTagName,
+    MissingAttributeValue,
+    MissingDoctypeName,
+    MissingDoctypePublicIdentifier,
+    MissingDoctypeSystemIdentifier,
+    MissingEndTagName,
+    MissingQuoteBeforeDoctypePublicIdentifier,
+    MissingQuoteBeforeDoctypeSystemIdentifier,
+    MissingSemicolonAfterCharacterReference,
+    MissingWhitespaceAfterDoctypePublicKeyword,
+    MissingWhitespaceAfterDoctypeSystemKeyword,
+    MissingWhitespaceBeforeDoctypeName,
+    MissingWhitespaceBetweenAttributes,
+    MissingWhitespaceBetweenDoctypePublicAndSystemIdentifiers,
+    NestedComment,
+    NoncharacterCharacterReference,
+    NoncharacterInInputStream,
+    NonVoidHtmlElementStartTagWithTrailingSolidus,
+    NullCharacterReference,
+    SurrogateCharacterReference,
+    SurrogateInInputStream,
+    UnexpectedCharacterAfterDoctypeSystemIdentifier,
+    UnexpectedCharacterInAttributeName,
+    UnexpectedCharacterInUnquotedAttributeValue,
+    UnexpectedEqualsSignBeforeAttributeName,
+    UnexpectedNullCharacter,
+    UnexpectedQuestionMarkInsteadOfTagName,
+    UnexpectedSolidusInTag,
+    UnknownNamedCharacterReference,
+};
