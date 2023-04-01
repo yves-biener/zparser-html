@@ -1,18 +1,18 @@
 const Self = @This();
 
-export const State = enum {
+pub const State = enum {
     DATA,
     RECONSUME,
     RETURN,
 };
 
-export const Attribute = struct {
+pub const Attribute = struct {
     key: []const u8,
     value: []const u8,
 };
 
 /// See [Tokenization](https://html.spec.whatwg.org/multipage/parsing.html#tokenization) for more details.
-export const Token = union(enum) {
+pub const Token = union(enum) {
     DOCTYPE: struct {
         name: ?[]const u8 = null,
         pub_identifier: ?[]const u8 = null,
